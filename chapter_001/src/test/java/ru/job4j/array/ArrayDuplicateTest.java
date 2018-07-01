@@ -23,7 +23,7 @@ public class ArrayDuplicateTest {
         ArrayDuplicate dupl = new ArrayDuplicate();
         String[] input = {"Привет", "Динамо", "Мир", "Привет", "Супер", "Танго", "Привет", "Мир"};
         String[] output = dupl.remove(input);
-        String[] expect = {"Привет", "Динамо", "Мир", "Супер", "Танго"};
+        String[] expect = {"Привет", "Динамо", "Мир", "Танго", "Супер"};
 
         assertThat(output, is(expect));
     }
@@ -33,7 +33,7 @@ public class ArrayDuplicateTest {
             ArrayDuplicate dupl = new ArrayDuplicate();
             String[] input = {"Привет", "Динамо", "Динамо", "Мир", "Привет", "Супер", "Танго", "Привет", "Мир"};
             String[] output = dupl.remove(input);
-            String[] expect = {"Привет", "Динамо", "Мир", "Супер", "Танго"};
+            String[] expect = {"Привет", "Динамо", "Танго", "Мир", "Супер"};
 
             assertThat(output, is(expect));
 

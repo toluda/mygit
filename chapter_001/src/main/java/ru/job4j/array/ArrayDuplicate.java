@@ -12,19 +12,15 @@ public class ArrayDuplicate {
                     if (pos == (k + 1)) {
                         break;
                     }
-
-                    for (int t = i; t < pos - 1; t++) {
-                       temp = array[t];
-                       array[t] = array[t + 1];
-                       array[t + 1] = temp;
-
-                   }
-                   pos--;
+                    temp = array[pos - 1];
+                    array[pos - 1] = array[i];
+                    array[i] = temp;
+                    i--;
+                    pos--;
                 }
             }
         }
 
-        array = Arrays.copyOf(array, pos);
-        return array;
+        return Arrays.copyOf(array, pos);
     }
 }
